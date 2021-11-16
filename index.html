@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html>
+<head>
+    <style>
+        #Area {
+            height: 300px;
+            width: 300px;
+            position: relative;
+            background: black;
+        }
+
+        #pp {
+            height: 150px;
+            width: 150px;
+            position: relative;
+            background: white;
+            animation: Ikot 3s infinite;
+        }
+
+        @keyframes Ikot {
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+    <title>"My Portfolio"</title>
+</head>
+<body onload="myMove()">
+    <h1>About Me</h1>
+    <p>Hi I'm Marcloi I'm a programmer, Born in 2003, From the Philippines, My hobbies are playing MMORPGS and Coding</p>
+    <p>I'm proficient at game development and project managements</p>
+
+    <div id="Area">
+        <div id="pp">
+            <img src="PP.jpg" alt="MyPicture" height="150" width="150" />
+        </div>
+    </div>
+
+    <h2>Contacts</h2>
+    <p>Mobile Number : (+63) 09282428775</p>
+    <p>Address : N/A</p>
+
+    <h3>Links</h3>
+    <a href="https://www.facebook.com/Marcloi.Rada.Cardona">Facebook</a>
+    <a href="https://github.com/Marcloi">Github</a>
+
+    <h4>Misc</h4>
+    <p id="Date"></p>
+    <script>
+        const date = new Date();
+
+        document.getElementById("Date").innerHTML = date;
+        document.body.style.backgroundColor = "grey";
+
+        var id = null;
+        function myMove() {
+            var intr = document.getElementById("pp");
+            var pos = 0;
+
+            clearInterval(id);
+            id = setInterval(frame, 10);
+
+            function frame() {
+                if (pos == 100) {
+                    clearInterval(id);
+                }
+                else {
+                    pos++;
+                    intr.style.top = pos + 'px';
+                    intr.style.left = pos + 'px';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
