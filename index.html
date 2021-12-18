@@ -1,77 +1,50 @@
-﻿<!doctype html>
-<html>
-<head>
-    <style>
-        #Area {
-            height: 300px;
-            width: 300px;
-            position: relative;
-            background: black;
-        }
-
-        #pp {
-            height: 150px;
-            width: 150px;
-            position: relative;
-            background: white;
-            animation: Ikot 3s infinite;
-        }
-
-        @keyframes Ikot {
-            100% {
-                transform: rotate(360deg)
-            }
-        }
-    </style>
-    <title>"My Portfolio"</title>
-</head>
-<body onload="myMove()">
-    <h1>About Me</h1>
-    <p>Hi I'm Marcloi I'm a programmer, Born in 2003, From the Philippines, My hobbies are playing MMORPGS and Coding</p>
-    <p>I'm proficient at game development and project managements</p>
-
-    <div id="Area">
-        <div id="pp">
-            <img src="PP.jpg" alt="MyPicture" height="150" width="150" />
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>My portfolio</title>
+    </head>
+    <body>
+        <div id="Basic information">
+            <h1>MARCLOI RADA CARDONA</h1>
+            <p>Mobile Number : (+63) 92-824-28775</p>
+            <p>Email : marcloicardonarada@gmail.com</p>
         </div>
-    </div>
-
-    <h2>Contacts</h2>
-    <p>Mobile Number : (+63) 9282428775</p>
-    <p>Address : N/A</p>
-    <p>Email : marcloicardonarada@gmail.com</p>
-
-    <h3>Links</h3>
-    <a href="https://www.facebook.com/Marcloi.Rada.Cardona">Facebook</a>
-    <a href="https://github.com/Marcloi">Github</a>
-
-    <h4>Misc</h4>
-    <p id="Date"></p>
-    <script>
-        const date = new Date();
-
-        document.getElementById("Date").innerHTML = date;
-        document.body.style.backgroundColor = "grey";
-
-        var id = null;
-        function myMove() {
-            var intr = document.getElementById("pp");
-            var pos = 0;
-
-            clearInterval(id);
-            id = setInterval(frame, 10);
-
-            function frame() {
-                if (pos == 100) {
-                    clearInterval(id);
-                }
-                else {
-                    pos++;
-                    intr.style.top = pos + 'px';
-                    intr.style.left = pos + 'px';
-                }
-            }
-        }
-    </script>
-</body>
+        <div id="Experience">
+            <h1>EXPERIENCE</h1>
+            <p>C#-Programming : Level-Intermidiate, 5 years of experience</p>
+            <p>Javascript : Level-begginer, 2 years of experience</p>
+            <p>Unity Engine : 3yrs of experience</p>
+            <p>Unreal Engine : 1yr of experience</p>
+        </div>
+        <div id="Education">
+            <h1>EDUCATION</h1>
+            <p>Kinder</p>
+            <p>Elementary</p>
+            <p>K-12 (Grade levels 7, 8, 9, 10)</p>
+            <p>Lego educational robotics and computer technical training in university of the east</p>
+            <p>K-12 (Grade levels 11, 12) "Mobile and Web Development" course</p>
+        </div>
+        <div id="Skills">
+            <h1>SKILLS</h1>
+            <p>Project management</p>
+            <p>Code refactoring/formatting</p>
+            <p>Repository management</p>
+            <p>Shader programming/design</p>
+            <p>Level design</p>
+        </div>
+        <div id="Activities">
+            <h1>ACTIVITIES</h1>
+            <p>PC gaming : I am a fan of the MMORPG genre my favorate games are World of Warcraft and Runescape, I also play Valorant and League of Legends</p>
+            <p>Fidget toys : I like playing with fidget toys that can relax my mind after brainstorming/deep thinking. I like the fidget spinner, fliping a pen or even a butterfly knife trainer</p>
+            <p>Discord moderation : I am also moderating some discord server on my free time</p>
+            <p>Fiction writting : Since I am an MMORPG player I like to create fantasy worlds, DnD scenarios and everything that is pop culture I try to have fun with</p>
+            <p>Basketball : I can also play basketball as my main sport even if I'm not very good at it</p>
+        </div>
+        <div id="Links">
+            <h1>LINKS</h1>
+            <p>https://github.com/Marcloi</p>
+        </div>
+        <p>"We learn from our mistakes, but life is easier without mistakes"</p>
+        <p>I prefer to not disclose more personal details in a public repository but I am willing to give it to a potential employer if requested</p>
+    </body>
 </html>
